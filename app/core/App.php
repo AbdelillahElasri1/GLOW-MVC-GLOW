@@ -19,6 +19,7 @@ class App
 
 		/** select controller **/
 		$filename = "../app/controllers/".ucfirst($URL[0]).".php";
+		var_dump($filename);
 		if(file_exists($filename))
 		{
 			require $filename;

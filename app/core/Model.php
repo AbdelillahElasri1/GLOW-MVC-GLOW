@@ -3,7 +3,7 @@
 /**
  * Main Model trait
  */
-class Model
+Trait Model
 {
 	use Database;
 
@@ -15,7 +15,7 @@ class Model
 	public $errors 		= [];
 
 	public function test(){
-		$query = 'SELECT * FROM users';
+		$query = 'SELECT * FROM product';
 		$result = $this->query($query);
 		show($result);
 	}
@@ -80,16 +80,16 @@ class Model
 	{
 		
 		/** remove unwanted data **/
-		if(!empty($this->allowedColumns))
-		{
-			foreach ($data as $key => $value) {
+		// if(!empty($this->allowedColumns))
+		// {
+		// 	foreach ($data as $key => $value) {
 				
-				if(!in_array($key, $this->allowedColumns))
-				{
-					unset($data[$key]);
-				}
-			}
-		}
+		// 		if(!in_array($key, $this->allowedColumns))
+		// 		{
+		// 			unset($data[$key]);
+		// 		}
+		// 	}
+		// }
 
 		$keys = array_keys($data);
 
