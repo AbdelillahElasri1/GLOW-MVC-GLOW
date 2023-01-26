@@ -1,103 +1,61 @@
 
-<div class="h-screen">
+<div class="md:h-screen">
         <?php require_once './public/includes/nav.php' ?>
       <!-- carsoul start -->
 
 
-    <div id="animation-carousel" class="relative" data-carousel="static">
-        <!-- Carousel wrapper -->
-        <div class="relative h-56  rounded-lg md:h-96">
-             <!-- Item 1 -->
-            <div class="hidden duration-200 ease-linear" data-carousel-item>
-                <img src="./View/img/bg.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-200 ease-linear" data-carousel-item>
-                <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-                <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 4 -->
-            <div class="hidden duration-200 ease-linear" data-carousel-item>
-                <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 5 -->
-            <div class="hidden duration-200 ease-linear bg-blue-600" data-carousel-item>
-                <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-        </div>
-        <!-- Slider controls -->
-        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg aria-hidden="true" class="w-5 h-5 text-gray sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg aria-hidden="true" class="w-5 h-5 text-gray sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
+    <div>
+        <img class="w-full h-screen -mt-12" src="./View/img/bg.jpg" alt="">
     </div>
     
 
     <!-- carsoul end -->
 
     <!-- slide start -->
-    <div class="">
-      <div class="flex gap-6">
-      <img class="ml-8 mb-8 rounded-[70px] h-[250px]" src="./View/img/bg.jpg" alt="">
-      <img class="ml-2 mb-8 rounded-[70px] h-[250px]" src="./View/img/bg.jpg" alt="">
-      <img class="ml-2 mb-8 rounded-[70px] h-[250px]" src="./View/img/bg.jpg" alt="">
-      </div>
-      
-      
-      <!-- <div>
-      <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magnam dicta minus nostrum consequatur quisquam 
-        sequi laborum quod! Quidem pariatur laudantium recusandae unde id, enim eum expedita, eligendi excepturi obcaecati vero, 
-        in ea aspernatur? Modi quod sint soluta eligendi autem dolorum error cumque maxime amet delectus asperiores, aliquam odio saepe.</p>
-    </div> -->
+    <div class="my-12">
+        <div class="flex justify-around items-center">
+            <hr class=" w-[400px] border-2 border-violet-500 max-sm:w-[100]"><h3 class="flex justify-center font-bold text-2xl mb-8 ">Best Items</h3><hr class="w-[400px] border-2 border-violet-500 max-sm:w-[100]">
+        </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <img class="rounded-[70px] w-5/6 place-self-center  ml-2" src="./View/img/bg.jpg" alt="">
+        <img class="rounded-[70px] w-5/6 place-self-center " src="./View/img/bg.jpg" alt="">
+        <img class="rounded-[70px] w-5/6 place-self-center " src="./View/img/bg.jpg" alt="">
     </div>
+</div>
     <!-- slide end -->
 
     <!-- product start -->
     <div class="bg-white p-6">
         <h1 class="text-2xl font-medium mb-4">Products</h1>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div class="bg-white rounded-lg shadow-lg flex ">
-              <div class="px-6 py-4 ">
-                <img class="w-full w-[550px] h-[250px]" src="./View/img/bg.jpg" alt="Product 1">
-              <!-- <h2 class="text-xl font-medium mb-2 px-10 ">Product 1</h2>
-              <p class="text-gray-700 mb-4 px-12  " >$20.00</p>
-              <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 px-12  ">Add to Cart</button> -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 max-sm:justify-items-center">
+            <div class="bg-white rounded-lg shadow-lg flex max-sm:flex-col max-sm:w-5/6">
+                <div class="px-6 py-4 ">
+                    <img class="w-full w-[550px] h-[250px]" src="./View/img/bg.jpg" alt="Product 1">
+                </div>
+                <div>
+                    <p class="w-5/6 text-center m-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis voluptatibus, Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, atque?</p>
+                    <div class="w-full flex justify-center">
+                        <button class="bg-blue-600 w-40 h-12 rounded-full my-8 mx-auto">Learn more</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis voluptatibus, Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, atque?</p>
-                <button class="bg-blue-600 w-40 h-12 rounded-full mt-[100px] ml-[100px]">Learn more</button>
+            <!-- Repeat the above div for additional products -->
+            <div class="bg-white rounded-lg shadow-lg  flex max-sm:flex-col max-sm:w-5/6">
+                <div class="px-6 py-4">
+                    <img class="w-full w-[550px] h-[250px]" src="./View/img/bg.jpg" alt="Product 1">
+                </div>
+                <div>
+                    <p class="w-5/6 text-center m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptates impedit molestiae Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ut. </p>
+                    <div class="w-full flex justify-center">
+                        <button class="bg-blue-600 w-40 h-12 rounded-full my-8 mx-auto">Learn more</button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- Repeat the above div for additional products -->
-          <div class="bg-white rounded-lg shadow-lg flex">
-              <div class="px-6 py-4">
-                <img class="w-full w-[550px] h-[250px]" src="./View/img/bg.jpg" alt="Product 1">
-              <!-- <h2 class="text-xl font-medium mb-2 px-10">Product 1</h2>
-              <p class="text-gray-700 mb-4 px-12">$20.00</p>
-              <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 px-12">Add to Cart</button> -->
-            </div>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptates impedit molestiae Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ut. </p>
-                <button class="bg-blue-600 w-40 h-12 rounded-full mt-[100px] ml-[100px]">Learn more</button>
-          </div>
-        </div>
       </div>
       
     <!-- product end -->
     <!-- vedio start -->
-      <h1 class="ml-[520px] mt-[60px] font-bold">this video for tutorial</h1>
+      <h1 class="text-center mt-6 font-bold sm:text-center mt-[60px]">this video for tutorial</h1>
     <video class="w-full h-[450px] mt-[50px]" autoplay controls>
     <source src="./View/img/타마누 오일이 주는 강력한 회복에너지🌿[시오리스 _ 유 룩 쏘 영 나이트 크림].mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -106,7 +64,7 @@
     <!-- vedio end -->
 
     <!-- card start -->
-  <div class="flex gap-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-[100px]">
       <a href="#">
           <img class="rounded-t-lg " src="./View/img/bg.jpg" alt="" />
@@ -157,7 +115,7 @@
   </div>
 
     <!-- card end -->
-    <footer class="p-4 bg-black shadow mt-14 md:px-6 md:py-8 ">
+    <footer class="p-4 bg-gray-700 shadow mt-14 md:px-6 md:py-8 ">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href="" class="flex items-center mb-4 sm:mb-0">
                 <img src="./View/img/bg.jpg" class="mr-3 h-8" alt="" />

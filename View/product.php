@@ -18,7 +18,7 @@
                                 <td class="pl-4 cursor-pointer">
                                     <div class="flex items-center">
                                         <div class="w-10 h-10">
-                                        <?= '<img class="w-full h-full" src="data:image/jpeg;base64,' . base64_encode($value['productPic']) . '" />'; ?>
+                                        <img class="w-full h-full" src="./View/img/<?= $value['productPic']?>" />
                                         </div>
                                     </div>
                                 </td>

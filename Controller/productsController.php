@@ -8,13 +8,16 @@ class productController  {
         
         if(isset($_POST['submit'])){
             foreach ($_POST['productName'] as $key => $name) {
+                    move_uploaded_file($_FILES['productPic']['tmp_name'][$key], './View/img/' . $_FILES['productPic']['name'][$key]);
                     $data[$key]['productName'] = htmlspecialchars($name, ENT_QUOTES);
                     //$data[$key]['productName'] = $_POST['productName'][$key];
                     $data[$key]['productPrice'] = $_POST['productPrice'][$key];
+                    $data[$key]['productPic'] = $_FILES['productPic']['name'][$key];
+                    // $data[$key]['productPic'] = file_get_contents($image);
+                    
                 }
-                foreach ($_FILES['productPic']['tmp_name'] as $key => $image) {
-                    $data[$key]['productPic'] = file_get_contents($image);
-                }
+                // var_dump($data);
+                // exit;
             $Model = new productModel;
             $Model->insert($data);
         }else{
@@ -52,8 +55,10 @@ class productController  {
         }else{
             $bool = false;
         }
+        move_uploaded_file($_FILES['productPic']['tmp_name'], './View/img/' . $_FILES['productPic']['name']);
         $this->post=[
-            'productPic'=> $bool?file_get_contents($_FILES['productPic']['tmp_name']):'',
+            //'productPic'=> $bool?file_get_contents($_FILES['productPic']['tmp_name']):'',
+            'productPic' => $_FILES['productPic']['name'],
             'productName'=>$_POST['productName'],
             'productPrice'=>$_POST['productPrice']
         ];
